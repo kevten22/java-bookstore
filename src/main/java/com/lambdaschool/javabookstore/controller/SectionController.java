@@ -20,5 +20,4 @@ public class SectionController {
     public List<Section> listAllSections(){
         return sectionrepos.findAll();
     }
-
 }
