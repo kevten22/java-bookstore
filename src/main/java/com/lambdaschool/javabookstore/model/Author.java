@@ -11,8 +11,8 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long authorid;
-    private String lastname;
-    private String firstname;
+    private String lname;
+    private String fname;
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "wrote",
@@ -33,19 +33,19 @@ public class Author {
     }
 
     public String getLastname() {
-        return lastname;
+        return lname;
     }
 
     public void setLastname(String lastname) {
-        this.lastname = lastname;
+        this.lname = lastname;
     }
 
     public String getFirstname() {
-        return firstname;
+        return fname;
     }
 
     public void setFirstname(String firstname) {
-        this.firstname = firstname;
+        this.fname = firstname;
     }
 
     public Set<Book> getBooks() {

@@ -21,7 +21,7 @@ public class Book {
     @JsonIgnoreProperties("books")
     private Section section;
 
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "authors")
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "books")
     private Set<Author> authors;
 
     public Book() {
